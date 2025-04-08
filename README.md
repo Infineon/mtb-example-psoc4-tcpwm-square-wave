@@ -4,14 +4,14 @@ This code example demonstrates how to generate a square wave using the TCPWM per
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-psoc4-tcpwm-square-wave)
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzYzOTYiLCJTcGVjIE51bWJlciI6IjAwMi0zNjM5NiIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IDQ6IFRDUFdNIHNxdWFyZSB3YXZlIiwicmlkIjoicmFqYW5uYWdhdXRhIiwiRG9jIHZlcnNpb24iOiIxLjMuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzYzOTYiLCJTcGVjIE51bWJlciI6IjAwMi0zNjM5NiIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IDQ6IFRDUFdNIHNxdWFyZSB3YXZlIiwicmlkIjoicmFqYW5uYWdhdXRhIiwiRG9jIHZlcnNpb24iOiIxLjQuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 ## Requirements
 
-- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.4 or later (tested with v3.4)
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.5 or later (tested with v3.5)
 - Board support package (BSP) minimum required version: 3.1.0
 - Programming language: C
-- Associated parts: [PSOC&trade; 4000S, PSOC&trade; 4100S Plus, PSOC&trade; 4100S Max, PSOC&trade; 4000T, PSOC&trade; 4500S](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-4-32-bit-arm-cortex-m0-mcu/) and [PSOC&trade; 4 HV (High Voltage)](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/32-bit-psoc-4-hv-arm-cortex-m0/)
+- Associated parts: [PSOC&trade; 4000S, PSOC&trade; 4100S Plus, PSOC&trade; 4100S Max, PSOC&trade; 4000T, PSOC&trade; 4500S, PSOC&trade; 4100T Plus](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-4-32-bit-arm-cortex-m0-mcu/) and [PSOC&trade; 4 HV (High Voltage)](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/32-bit-psoc-4-hv-arm-cortex-m0/)
 
 ## Supported toolchains (make variable 'TOOLCHAIN')
 
@@ -27,6 +27,7 @@ This code example demonstrates how to generate a square wave using the TCPWM per
 - [PSOC&trade; 4000T CAPSENSE&trade; Prototyping Kit](https://www.infineon.com/CY8CPROTO-040T) (`CY8CPROTO-040T`)
 - [PSOC&trade; 4000T Multi-Sense Prototyping Kit](https://www.infineon.com/CY8CPROTO-040T-MS) (`CY8CPROTO-040T-MS`)
 - [PSOC&trade; 4500S Pioneer Kit](https://www.infineon.com/CY8CKIT-045S) (`CY8CKIT-045S`)
+- [PSOC&trade; 4100T Plus CAPSENSE&trade; Prototyping kit](https://www.infineon.com/CY8CPROTO-041TP) (`CY8CPROTO-041TP`)
 - [PSOC&trade; 4 HVMS-128K Evaluation Kit](https://www.infineon.com/KIT_PSOC4-HVMS-128K_LITE) (`KIT_PSOC4-HVMS-128K_LITE`)
 - [PSOC&trade; 4 HVMS-64K Evaluation Kit](https://www.infineon.com/KIT_PSOC4-HVMS-64K_LITE) (`KIT_PSOC4-HVMS-64K_LITE`)
 
@@ -228,6 +229,7 @@ The application blinks an LED by controlling the GPIO output.
 **Note:**
 
 - LED1 blinks for the [CY8CKIT-041S-MAX](https://www.infineon.com/CY8CKIT-041S-MAX) and [CY8CKIT-145-40XX](https://www.infineon.com/CY8CKIT-145-40XX) kits.
+- LED2 blinks for the [CY8CPROTO-041TP](https://www.infineon.com/CY8CPROTO-041TP) kit.
 - LED3 blinks for the [CY8CPROTO-040T](https://www.infineon.com/CY8CPROTO-040T) and [CY8CPROTO-040T-MS](https://www.infineon.com/CY8CPROTO-040T-MS) kits.
 - LED12 blinks for the [CY8CKIT-149](https://www.infineon.com/CY8CKIT-149) kit.
 - USER LED blinks with green color for the [CY8CKIT-045S](https://www.infineon.com/CY8CKIT-045S) kit.
@@ -262,6 +264,7 @@ Document title: *CE236396* - *PSOC&trade; 4: TCPWM square wave*
  1.1.0   | Added support for new kits and updated to support ModusToolbox&trade; v3.1.
  1.2.0   | Added support for KIT_PSOC4-HVMS-128K_LITE and KIT_PSOC4-HVMS-64K_LITE and updated to support ModusToolbox&trade; v3.2.
  1.3.0   | Added support for CY8CPROTO-040T-MS and updated to support ModusToolbox&trade; v3.4.
+ 1.4.0   | Added support for CY8CPROTO-041TP and updated to support ModusToolbox&trade; v3.5. <br> Changed HVMS kit name PSoC4 to PSOC4.
 <br>
 ---------------------------------------------------------
 
